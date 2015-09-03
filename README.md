@@ -24,4 +24,5 @@ Important: ad server variable `_ADCLICK_` (as well as all others) can only be us
 
 ## 3. Client Side
 
+* Do not include any HTML `<html>`, `<head>` and/or `<body>` structure.
 * Rembember to use unique ID and/or classnames to avoid style conflicts with websites. 
