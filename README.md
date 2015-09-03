@@ -1,6 +1,6 @@
-# Specification for HTML based adverts
+# Specification for HTML-based adverts
 
-## Files and Folders
+## Files
 * Avoid use of subfolders.
 * Require all media files under main HTML document, resolving local file paths is restricted.
 
