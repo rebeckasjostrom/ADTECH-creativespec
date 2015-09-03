@@ -9,19 +9,19 @@
 
 ### Ad Server Variables
 
-* Local file path
+Local file path
 
 ```
 _ADPATH_
 ```
 
-* Click Through URL
+Click Through URL
 
 ```
 _ADCLICK_
 ```
 
-* Click Through URL (escaped)
+Click Through URL (escaped)
 
 ```
 _ADCLICKESC_
