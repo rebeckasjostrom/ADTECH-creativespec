@@ -1,6 +1,6 @@
 # Specification for HTML-based adverts
 
-## Files
+## 1. Files
 * Avoid use of subfolders.
 * Require all media files under main HTML document, resolving local file paths is restricted.
 
@@ -11,7 +11,7 @@ All local (uploaded) files must be included using our `_ADPATH_` variable within
 <img src="_ADPATH_image.png">
 ```
 
-## Click Counter
+## 2. Click Counter
 
 ```html
 <a href="_ADCLICK_http://domain.com">
@@ -19,4 +19,4 @@ All local (uploaded) files must be included using our `_ADPATH_` variable within
 
 Note: ad server variables can only be used within the main HTML document.
 
-## Client Side
+## 3. Client Side
