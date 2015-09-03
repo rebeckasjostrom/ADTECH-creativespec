@@ -11,7 +11,9 @@
 
 * Local file path
 
-```_ADPATH_```
+```
+_ADPATH_
+```
 
 Note: ad server variables can only be used within the main HTML document.
 
