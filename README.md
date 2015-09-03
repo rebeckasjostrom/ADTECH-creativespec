@@ -10,13 +10,13 @@
 
 Local file path
 
-```
+```html
 <img src="_ADPATH_image.png">
 ```
 
 Click Through URL
 
-```
+```html
 <a href="_ADCLICK_http://domain.com">
 ```
 
