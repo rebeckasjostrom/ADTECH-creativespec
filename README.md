@@ -28,3 +28,5 @@ Recommendations for advert designers and developers:
 
 * Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
 * Avoid applying any styles on common website elements, ID's and/or class names to prevent conflicts with existing website structure. We highly recommend using unique ID's and class names!
+
+Remember, this code will be embedded within an existing website structure!
