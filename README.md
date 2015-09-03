@@ -4,6 +4,7 @@
 * Avoid use of subfolders.
 * Require all media files under main HTML document, resolving local file paths is restricted.
 
+#### Sidenote
 All local (uploaded) files must be included using our `_ADPATH_` variable within the index document.
 
 ```html
