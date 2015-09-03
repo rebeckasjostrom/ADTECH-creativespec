@@ -3,6 +3,7 @@
 ## 1. Files
 * Avoid use of subfolders.
 * Require all media files under index document, resolving local file paths is restricted.
+* External JavaScript documents may be loaded using a JavaScript function and/or copy/pasted within the index document. 
 
 ###### Sidenote
 All local (uploaded) files must be included using our `_ADPATH_` variable within the index document.
