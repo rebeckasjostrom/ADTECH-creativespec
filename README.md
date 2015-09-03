@@ -4,9 +4,7 @@
 * Avoid use of subfolders.
 * Require all media files under main HTML document, resolving local file paths is restricted.
 
-## Ad Server Variables
-
-Local file path
+Locating files with help of variable
 
 ```html
 <img src="_ADPATH_image.png">
