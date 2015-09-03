@@ -1,12 +1,10 @@
 # Specification for HTML based adverts
 
-## 1. Ad Server Side
-
-### Files and Folders
+## Files and Folders
 * Avoid use of subfolders.
 * Require all media files under main HTML document, resolving local file paths is restricted.
 
-### Ad Server Variables
+## Ad Server Variables
 
 Local file path
 
@@ -14,7 +12,7 @@ Local file path
 <img src="_ADPATH_image.png">
 ```
 
-Click Through URL
+## Click Counter
 
 ```html
 <a href="_ADCLICK_http://domain.com">
@@ -22,4 +20,4 @@ Click Through URL
 
 Note: ad server variables can only be used within the main HTML document.
 
-## 2. Client Side
+## Client Side
