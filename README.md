@@ -15,6 +15,18 @@
 _ADPATH_
 ```
 
+* Click Through URL
+
+```
+_ADCLICK_
+```
+
+* Click Through URL (escaped)
+
+```
+_ADCLICKESC_
+```
+
 Note: ad server variables can only be used within the main HTML document.
 
 ## 2. Client Side
