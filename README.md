@@ -26,5 +26,5 @@ Important: ad server variable `_ADCLICK_` (as well as all others) can only be us
 
 Recommendations for advert designers and developers:
 
-* Do not include any HTML `<html>`, `<head>` and/or `<body>` code structure, nor any `<meta>` tags.
-* Rembember to use unique ID and/or classnames to avoid style conflicts with websites. 
+* Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
+* Avoid applying any styles on common website elements, ID's and/or class names to prevent conflicts with existing website structure. 
