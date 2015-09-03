@@ -7,11 +7,11 @@
 #### Sidenote
 All local (uploaded) files must be included using our `_ADPATH_` variable within the index document.
 
-Important: ad server variable `_ADPATH_` (as well as all others) can only be used within the index document.
-
 ```html
 <img src="_ADPATH_image.png">
 ```
+
+Important: ad server variable `_ADPATH_` (as well as all others) can only be used within the index document.
 
 ## 2. Click Counter
 
