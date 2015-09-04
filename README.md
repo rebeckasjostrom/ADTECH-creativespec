@@ -1,5 +1,7 @@
 # Specification for HTML-based adverts
 
+This document is updated frequently.
+
 ## 1. Files
 * Avoid loading media files from subfolders.
 * Avoid loading media files under multiple documents, resolving local file paths is limited to index.
