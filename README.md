@@ -1,4 +1,4 @@
-# Specification for HTML creatives
+# Specification for HTML-based creatives
 
 A general specification for HTML creatives 
 
