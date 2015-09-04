@@ -7,7 +7,7 @@ This document provides general requirements for HTML/HTMl5 creatives. Please not
 ## 1. Files
 * Avoid loading media files from subfolders.
 * Avoid loading media files under multiple documents, resolving local file paths is limited to index.
-* External JavaScript documents may be loaded using a JavaScript function and/or copy/pasted within the index document. We recommend using our [Script Loader](http://www.github.com) function.
+* External JavaScript documents may be loaded using a JavaScript function and/or copy/pasted within the index document. We recommend using our [Script Loader](https://github.com/fredrikborggren/ADTECH.load) solution.
 * All local (uploaded) files must be included using our `_ADPATH_` variable within the index document.
 
 ```html
