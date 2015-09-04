@@ -1,11 +1,8 @@
 # Specification for HTML-based creatives
 
-A general specification for HTML creatives 
-
-
-
-
-This document is updated frequently.
+This document provides general requirements for HTML/HTMl5 creatives. Please note that this document is updated frequently. 
+ 
+Important: This document does not provide site and/or client specific requirements!
 
 ## 1. Files
 * Avoid loading media files from subfolders.
