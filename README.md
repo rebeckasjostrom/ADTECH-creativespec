@@ -1,4 +1,4 @@
-# ADTECH Specification for HTML creatives
+# Specification for HTML creatives
 
 A general specification for HTML creatives 
 
