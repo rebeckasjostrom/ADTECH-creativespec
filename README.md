@@ -24,6 +24,12 @@ Variable | Description
 
 ### HTML
 
+CSS
+
+```css
+#foo { background: url('_ADPATH_image.png') no-repeat 0 0 scroll; }
+```
+
 
 Style Sheets
 
