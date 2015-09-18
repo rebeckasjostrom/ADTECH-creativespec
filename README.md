@@ -76,7 +76,7 @@ var clickPath = window.adclick + 'http://clickthrough.com';
 
 ### Unique Names
 
-You can easily create unique names with help of adserver variables.
+Creating unique identifiers, classes, variables and function names is a very good way of avoiding any conflicts with receiving website(s). We highly recommend using unique identifiers.
 
 ##### CSS 
 
@@ -102,7 +102,7 @@ Using campaign and banner identifier
 
 Resolves into e.g:
 
-```html
+```css
 <div id="foo_1234567_1"></div>
 ```
 
