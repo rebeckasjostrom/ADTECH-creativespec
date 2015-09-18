@@ -102,7 +102,7 @@ Using campaign and banner identifier
 
 Resolves into e.g:
 
-```css
+```html
 <div id="foo_1234567_1"></div>
 ```
 
