@@ -78,7 +78,7 @@ var clickPath = window.adclick + 'http://clickthrough.com';
 
 Some extra recommendations/suggestions for advert designers and developers.
 
-### Unique Names
+##### Unique Names
 
 Using unique identifiers, classes, variables and function names is a highly recommend way of avoiding  conflicts with receiving website(s), one way of doing this is using adserver variables.
 
