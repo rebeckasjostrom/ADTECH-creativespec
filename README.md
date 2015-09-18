@@ -1,28 +1,67 @@
 # Specification for HTML-based creatives
 
-This document provides general requirements for HTML/HTMl5 creatives. Please note that this document is updated frequently. 
- 
-**This document does not provide specific site and/or client requirements!**
+This document provides general requirements for HTML/HTMl5 creatives. Please note that this document is updated frequently. Please note that the client and/or site may have extended requirements in addition to this document.
 
-## 1. Files
-* Avoid loading media files from subfolders.
-* Avoid loading media files under multiple documents, resolving local file paths is limited to index.
-* External JavaScript documents may be loaded using a JavaScript function and/or copy/pasted within the index document. We recommend using our [Script Loader](https://github.com/fredrikborggren/ADTECH.load) solution.
-* All local (uploaded) files must be included using our `_ADPATH_` variable within the index document.
+## 1. Requirements & Limitations
+
+* Subfolders not supported.
+* All media files must be loaded using server variables.
+* External JavaScript documents must be initialized using our [Script Loader](https://github.com/fredrikborggren/ADTECH.load) method.
+
+
+## 2. Server Variables
+
+This section describes server variables identifiable by the adserver. These variables are partly employed in the banner code by default or may be used as additional options. Please note that these variables may only be used within the main HTML document.
+
+List of common server variables
+
+Variable | Description
+---------|------------
+`_ADPATH_` | Replaced by ADTECH file server path URL.
+`_ADCLICK_` | Replaced by ADTECH click counting URL.
+`_ADTIME_` | Replaced by ADTECH random millisecond value.
+
+
+### HTML
+
+
+Style Sheets
+
+```html
+<link href="_ADPATH_styles.css" rel="stylesheet" type="text/css">
+```
+
+Links
+
+```html
+<a href="_ADCLICK_http://clickthrough.com" target="_blank"></a>
+```
+
+Images
 
 ```html
 <img src="_ADPATH_image.png">
 ```
 
-Important: ad server variable `_ADPATH_` (as well as all others) can only be used within the index document.
 
-## 2. Click Counter
+### JavaScript
 
-```html
-<a href="_ADCLICK_http://domain.com">
+Define global variables within `index.html` document:
+
+```javascript
+window.adpath = '_ADPATH_';
+window.adclick = '_ADCLICK_';
+window.adtime = '_ADTIME_';
 ```
 
-Important: ad server variable `_ADCLICK_` (as well as all others) can only be used within the index document.
+Resolve global variables within external documents:
+
+```javascript
+var imagePath = window.adpath + 'image.png';
+```
+```javascript
+var clickPath = window.adclick + 'http://clickthrough.com';
+```
 
 ## 3. Client Side
 
