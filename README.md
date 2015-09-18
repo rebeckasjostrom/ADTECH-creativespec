@@ -4,12 +4,14 @@ This document provides general requirements for HTML/HTMl5 creatives. Please not
 
 ## 1. Requirements & Limitations
 
-* Subfolders not supported.
-* All media files must be loaded using server variables.
+* No subfolder structure.
+* Use adserver variables for loading media files.
+* Use adserver variables only within the `index.html` file.
+* Use unique identifiers, classes, variables and function names.
 * External JavaScript documents must be initialized using our [Script Loader](https://github.com/fredrikborggren/ADTECH.load) method.
 
 
-## 2. Server Variables
+## 2. Adserver Variables
 
 This section describes server variables identifiable by the adserver. These variables are partly employed in the banner code by default or may be used as additional options. Please note that these variables may only be used within the main HTML document.
 
@@ -19,6 +21,9 @@ Variable | Description
 ---------|------------
 `_ADPATH_` | Replaced by ADTECH file server path URL.
 `_ADCLICK_` | Replaced by ADTECH click counting URL.
+`_ADCUID_` | Replaced by ADTECH placement identifier.
+`_ADADID_` | Replaced by ADTECH campaign identifier.
+`_ADBNID_` | Replaced by ADTECH banner identifier.
 `_ADTIME_` | Replaced by ADTECH random millisecond value.
 
 
@@ -68,6 +73,41 @@ var imagePath = window.adpath + 'image.png';
 ```javascript
 var clickPath = window.adclick + 'http://clickthrough.com';
 ```
+
+### Unique Names
+
+You can easily create unique names with help of adserver variables.
+
+##### CSS 
+
+Using campaign and banner identifier
+
+```css
+#foo__ADADID___ADBNID_ { /* styles */ }
+```
+
+Resolves into e.g:
+
+```css
+#foo_1234567_1 { /* styles */ }
+```
+
+##### HTML 
+
+Using campaign and banner identifier
+
+```html
+<div id="foo__ADADID___ADBNID_"></div>
+```
+
+Resolves into e.g:
+
+```css
+<div id="foo_1234567_1"></div>
+```
+
+
+
 
 ## 3. Client Side
 
