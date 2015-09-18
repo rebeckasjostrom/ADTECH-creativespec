@@ -74,6 +74,10 @@ var imagePath = window.adpath + 'image.png';
 var clickPath = window.adclick + 'http://clickthrough.com';
 ```
 
+## 3. Client Side
+
+Some extra recommendations/suggestions for advert designers and developers.
+
 ### Unique Names
 
 Using unique identifiers, classes, variables and function names is a highly recommend way of avoiding  conflicts with receiving website(s), one way of doing this is using adserver variables.
@@ -105,13 +109,6 @@ Resolves into e.g:
 ```css
 <div id="foo_1234567_1"></div>
 ```
-
-
-
-
-## 3. Client Side
-
-Recommendations for advert designers and developers:
 
 * Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
 * Avoid applying any styles on common website elements, ID's and/or class names to prevent conflicts with existing website structure. We highly recommend using unique ID's and class names!
