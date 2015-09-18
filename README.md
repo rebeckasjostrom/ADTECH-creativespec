@@ -78,9 +78,13 @@ var clickPath = window.adclick + 'http://clickthrough.com';
 
 Some extra recommendations/suggestions for advert designers and developers.
 
+* Avoid applying any styles on common website elements, identifiers, classes!
+* Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
+
 ##### Unique Names
 
-Using unique identifiers, classes, variables and function names is a highly recommend way of avoiding  conflicts with receiving website(s), one way of doing this is using adserver variables.
+Using unique identifiers, classes, variables and function names is a highly recommend way of avoiding  conflicts with receiving website(s), one way of doing this is using adserver variables. 
+
 
 ##### CSS 
 
@@ -110,7 +114,4 @@ Resolves into e.g:
 <div id="foo_1234567_1"></div>
 ```
 
-* Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
-* Avoid applying any styles on common website elements, ID's and/or class names to prevent conflicts with existing website structure. We highly recommend using unique ID's and class names!
-
-Remember, this code will be embedded within an existing website structure!
+**Remember, this code will be embedded within an existing website structure!**
