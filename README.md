@@ -4,7 +4,7 @@ This document provides general requirements for HTML/HTMl5 creatives. Please not
 
 ## 1. Requirements & Limitations
 
-* No subfolder structure.
+* No more than one layer of subfolders.
 * Use adserver variables for loading media files.
 * Use adserver variables only within the `index.html` file.
 * Use unique identifiers, classes, variables and function names.
