@@ -1,6 +1,6 @@
 # Specification for HTML-based creatives
 
-This document provides general requirements for HTML/HTMl5 creatives. Please note that this document is updated frequently. Please note that the client and/or site may have extended requirements in addition to this document.
+This document provides general requirements for HTML/HTML5 creatives. Please note that this document is updated frequently. Please note that the client and/or site may have extended requirements in addition to this document.
 
 ## 1. Requirements & Limitations
 
