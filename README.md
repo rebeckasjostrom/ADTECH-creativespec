@@ -13,7 +13,7 @@ This document provides general requirements for HTML/HTML5 creatives. Please not
 
 ## 2. Adserver Variables
 
-This section describes server variables identifiable by the adserver. These variables are partly employed in the banner code by default or may be used as additional options. Please note that these variables may only be used within the main HTML document.
+This section describes server variables identifiable by the adserver. These variables are partly employed in the banner code by default or may be used as additional options. 
 
 List of common server variables
 
@@ -26,6 +26,7 @@ Variable | Description
 `_ADBNID_` | Replaced by ADTECH banner identifier.
 `_ADTIME_` | Replaced by ADTECH random millisecond value.
 
+Please note that these variables may only be used within the main HTML document!
 
 ### HTML
 
