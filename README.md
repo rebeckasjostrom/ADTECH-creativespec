@@ -2,117 +2,193 @@
 
 This document provides general requirements for HTML/HTML5 creatives. Please note that this document is updated frequently. Please note that the client and/or site may have extended requirements in addition to this document.
 
-## 1. Requirements & Limitations
+## Contents
 
-* No more than one layer of subfolders.
-* Use adserver variables for loading media files.
-* Use adserver variables only within the `index.html` file.
-* Use unique identifiers, classes, variables and function names.
-* External JavaScript documents must be initialized using our [Script Loader](https://github.com/fredrikborggren/ADTECH.load) method.
+1. [Folder Structure]()
+	2. [Introduction]()
+	3. [Properties and Restrictions]()
+10. [HTML Structure]()
+	11. [Introduction]()
+	3. [Properties and Restrictions]()
+2. [Ad Server Variables]()
+	3. [Properties and Restrictions]()
+	4. [Variables]()
+	5. [Global Scope]()
+	6. [Usage]()
+		9. [Images]()
+		8. [Hypertext Links]()
+		7. [Cascading Style Sheets (CSS)]()
+		9. [JavaScript]()
+		9. [JavaScript Override]()
+10. [Identifiers]()
+	2. [Introduction]()
+	3. [Properties and Restrictions]()
+	11. [Elements]()
+	12. [Cascading Style Sheets (CSS)]()
+	13. [JavaScript]()
 
+## 1. Folder Structure
 
-## 2. Adserver Variables
+###Introduction
 
-This section describes server variables identifiable by the adserver. These variables are partly employed in the banner code by default or may be used as additional options. 
+Generally, an HTML5 banner consists of an index.html file and additional files in subfolders. This typical use case is supported as long as the creative have an index.html in the root folder, additional files can be stored on the same level or in subfolders.
 
-List of common server variables
+###Properties and Restrictions
+
+* Root folder must contain initial `index.html` document.
+
+##2. HTML Structure
+
+###Introduction
+
+Some extra recommendations/suggestions for advert designers and developers.
+
+###Properties and Restrictions
+
+* Avoid applying any styles on `html`,  `body` and any other common website identifiers.
+* Avoid including `<html>`, `<head>`, `<meta>` and `<body>`.
+
+## 3. Ad Server Variables
+
+###Introduction
+
+A list of global ad server variables identifiable by the ad server. These variables are partly employed in the banner code by default or may be used as additional options.
+
+###Properties and Restrictions
+
+* Ad Server variables may only be used within initial HTML document.
+
+###Variables
+
+The following variables are available:
 
 Variable | Description
 ---------|------------
-`_ADPATH_` | Replaced by ADTECH file server path URL.
-`_ADCLICK_` | Replaced by ADTECH click counting URL.
-`_ADCUID_` | Replaced by ADTECH placement identifier.
-`_ADADID_` | Replaced by ADTECH campaign identifier.
-`_ADBNID_` | Replaced by ADTECH banner identifier.
-`_ADTIME_` | Replaced by ADTECH random millisecond value.
+`_ADPATH_` | Replaced by the server path URL.
+`_ADCLICK_` | Replaced by the click counting URL.
+`_ADCUID_` | Replaced by the placement identifier.
+`_ADADID_` | Replaced by the campaign/flight identifier.
+`_ADBNID_` | Replaced by the banner identifier.
+`_ADTIME_` | Replaced by a random value (current time in milliseconds).
 
-Please note that these variables may only be used within the main HTML document!
+###Global Scope
 
-### HTML
+As previously mentioned, ad server variables may only be used within initial HTML document. However, in some cases it might be very useful to reach these externally. Achieving this generally very simple by registering global DOM variables from within the initial HTML document, making all variables available for any JavaScript dependencies with custom variable names.
 
-CSS
+Example:
 
-```css
-#foo { background: url('_ADPATH_image.png') no-repeat 0 0 scroll; }
+```javascript
+window.adpath = '_ADPATH_';
 ```
 
+OR
 
-Style Sheets
+```javascript
+window.parent.adpath = '_ADPATH_';
+```
+###Usage
+
+####Cascading Style Sheets (CSS)
 
 ```html
-<link href="_ADPATH_styles.css" rel="stylesheet" type="text/css">
+<style type="text/css">
+
+	#foo {
+		background-image: url('_ADPATH_image.png');
+	}
+	
+</style>
 ```
 
-Links
+####Images
 
-```html
-<a href="_ADCLICK_http://clickthrough.com" target="_blank"></a>
-```
-
-Images
+The ad server will generally append `_ADPATH_` for attribute `src` automatically.
 
 ```html
 <img src="_ADPATH_image.png">
 ```
 
+####Hypertext Links
 
-### JavaScript
+The ad server will generally append `_ADPATH_` for attribute `href` automatically.
 
-Define global variables within `index.html` document:
+```html
+<a href="_ADCLICK_http://domain.com" target="_blank"></a>
+```
+
+####JavaScript
+
+The ad server will generally append `_ADPATH_` for attributes `src` and `href` automatically. 
 
 ```javascript
-window.adpath = '_ADPATH_';
-window.adclick = '_ADCLICK_';
-window.adtime = '_ADTIME_';
+var link.href = '_ADCLICK_http://domain.com';
 ```
-
-Resolve global variables within external documents:
 
 ```javascript
-var imagePath = window.adpath + 'image.png';
+var img.src = '_ADPATH_image.png';
 ```
+
+####JavaScript Override
+
+Override automatic appending for media hosted elsewhere by adding `'' + ` before the path string.
+
 ```javascript
-var clickPath = window.adclick + 'http://clickthrough.com';
+var img.src = '' + 'http://domain.com/image.png';
 ```
 
-## 3. Client Side
+##4. Identifiers
 
-Some extra recommendations/suggestions for advert designers and developers.
+###Introduction
 
-* Avoid applying any styles on common website elements, identifiers, classes!
-* Avoid including any `<html>`, `<head>`, `<meta>` and/or `<body>` elements, creative code will be embedded within an existing website structure.
+Using unique identifiers, classes, variables and function names is a good way of avoiding conflicts, such as two ads with the same code interfering with one another.
 
-##### Unique Names
+###Properties and Restrictions
 
-Using unique identifiers, classes, variables and function names is a highly recommend way of avoiding  conflicts with receiving website(s), one way of doing this is using adserver variables. 
+* Use unique identifiers for elements, styles, variables and methods.
+* Ad Server variables may only be used within initial HTML document.
 
+###Elements
 
-##### CSS 
-
-Using campaign and banner identifier
-
-```css
-#foo__ADADID___ADBNID_ { /* styles */ }
-```
-
-Resolves into e.g:
-
-```css
-#foo_1234567_1 { /* styles */ }
-```
-
-##### HTML 
-
-Using campaign and banner identifier
+Using campaign and banner ID as element identifier
 
 ```html
 <div id="foo__ADADID___ADBNID_"></div>
 ```
 
-Resolves into e.g:
+Example result:
 
 ```html
 <div id="foo_1234567_1"></div>
 ```
 
-**Remember, this code will be embedded within an existing website structure!**
+###Cascading Style Sheets (CSS)
+
+Using campaign and banner ID as element identifier
+
+```css
+#foo__ADADID___ADBNID_ {
+	background-color: #000;
+}
+```
+
+Example result:
+
+```css
+#foo_1234567_1 {
+	background-color: #000;
+}
+```
+
+###JavaScript
+
+Using campaign and banner ID as element identifier
+
+```javascript
+document.getElementById('foo__ADADID___ADBNID_');
+```
+
+Example result:
+
+```javascript
+document.getElementById('foo_1234567_1');
+```
