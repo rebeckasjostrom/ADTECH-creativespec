@@ -30,17 +30,17 @@ This document provides general requirements for HTML/HTML5 creatives. Please not
 
 ## 1. Folder Structure
 
-###Introduction
+### Introduction
 
 Generally, an HTML5 banner consists of an index.html file and additional files in subfolders. This typical use case is supported as long as the creative have an index.html in the root folder, additional files can be stored on the same level or in subfolders.
 
-###Properties and Restrictions
+### Properties and Restrictions
 
 * Root folder must contain initial `index.html` document.
 
-##2. HTML Structure
+## 2. HTML Structure
 
-###Introduction
+### Introduction
 
 Some extra recommendations/suggestions for advert designers and developers.
 
@@ -51,15 +51,15 @@ Some extra recommendations/suggestions for advert designers and developers.
 
 ## 3. Ad Server Variables
 
-###Introduction
+### Introduction
 
 A list of global ad server variables identifiable by the ad server. These variables are partly employed in the banner code by default or may be used as additional options.
 
-###Properties and Restrictions
+### Properties and Restrictions
 
 * Ad Server variables may only be used within initial HTML document.
 
-###Variables
+### Variables
 
 The following variables are available:
 
@@ -72,7 +72,7 @@ Variable | Description
 `_ADBNID_` | Replaced by the banner identifier.
 `_ADTIME_` | Replaced by a random value (current time in milliseconds).
 
-###Global Scope
+### Global Scope
 
 As previously mentioned, ad server variables may only be used within initial HTML document. However, in some cases it might be very useful to reach these externally. Achieving this generally very simple by registering global DOM variables from within the initial HTML document, making all variables available for any JavaScript dependencies with custom variable names.
 
@@ -87,9 +87,9 @@ OR
 ```javascript
 window.parent.adpath = '_ADPATH_';
 ```
-###Usage
+### Usage
 
-####Cascading Style Sheets (CSS)
+#### Cascading Style Sheets (CSS)
 
 ```html
 <style type="text/css">
@@ -101,7 +101,7 @@ window.parent.adpath = '_ADPATH_';
 </style>
 ```
 
-####Images
+#### Images
 
 The ad server will generally append `_ADPATH_` for attribute `src` automatically.
 
@@ -117,7 +117,7 @@ The ad server will generally append `_ADPATH_` for attribute `href` automaticall
 <a href="_ADCLICK_http://domain.com" target="_blank"></a>
 ```
 
-####JavaScript
+#### JavaScript
 
 The ad server will generally append `_ADPATH_` for attributes `src` and `href` automatically. 
 
@@ -129,7 +129,7 @@ var link.href = '_ADCLICK_http://domain.com';
 var img.src = '_ADPATH_image.png';
 ```
 
-####JavaScript Override
+#### JavaScript Override
 
 Override automatic appending for media hosted elsewhere by adding `'' + ` before the path string.
 
@@ -137,18 +137,18 @@ Override automatic appending for media hosted elsewhere by adding `'' + ` before
 var img.src = '' + 'http://domain.com/image.png';
 ```
 
-##4. Identifiers
+## 4. Identifiers
 
-###Introduction
+### Introduction
 
 Using unique identifiers, classes, variables and function names is a good way of avoiding conflicts, such as two ads with the same code interfering with one another.
 
-###Properties and Restrictions
+### Properties and Restrictions
 
 * Use unique identifiers for elements, styles, variables and methods.
 * Ad Server variables may only be used within initial HTML document.
 
-###Elements
+### Elements
 
 Using campaign and banner ID as element identifier
 
@@ -162,7 +162,7 @@ Example result:
 <div id="foo_1234567_1"></div>
 ```
 
-###Cascading Style Sheets (CSS)
+### Cascading Style Sheets (CSS)
 
 Using campaign and banner ID as element identifier
 
@@ -180,7 +180,7 @@ Example result:
 }
 ```
 
-###JavaScript
+### JavaScript
 
 Using campaign and banner ID as element identifier
 
