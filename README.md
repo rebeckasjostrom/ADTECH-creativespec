@@ -5,8 +5,8 @@ This document provides general requirements for HTML/HTML5 creatives. Please not
 ## Contents
 
 1. [Folder Structure](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#1-folder-structure)
-	2. [Introduction](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#introduction)
-	3. [Properties and Restrictions](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#properties-and-restrictions)
+		2. [Introduction](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#introduction)
+		3. [Properties and Restrictions](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#properties-and-restrictions)
 4. [HTML Structure](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#2-html-structure)
 	5. [Introduction](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#introduction-1)
 	6. [Properties and Restrictions](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#properties-and-restrictions-1)
