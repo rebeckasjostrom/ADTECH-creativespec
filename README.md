@@ -3,7 +3,6 @@
 This document provides general requirements for HTML/HTML5 creatives. Please note that this document is updated frequently. Please note that the client and/or site may have extended requirements in addition to this document.
 
 ## Contents
-
 1. [Folder Structure](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#1-folder-structure)
 		2. [Introduction](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#introduction)
 		3. [Properties and Restrictions](https://github.com/fredrikborggren/ADTECH-creativespec/blob/master/README.md#properties-and-restrictions)
@@ -109,7 +108,7 @@ The ad server will generally append `_ADPATH_` for attribute `src` automatically
 <img src="_ADPATH_image.png">
 ```
 
-####Hypertext Links
+#### Hypertext Links
 
 The ad server will generally append `_ADPATH_` for attribute `href` automatically.
 
