@@ -43,7 +43,7 @@ Generally, an HTML5 banner consists of an index.html file and additional files i
 
 Some extra recommendations/suggestions for advert designers and developers.
 
-###Properties and Restrictions
+### Properties and Restrictions
 
 * Avoid applying any styles on `html`,  `body` and any other common website identifiers.
 * Avoid including `<html>`, `<head>`, `<meta>` and `<body>`.
